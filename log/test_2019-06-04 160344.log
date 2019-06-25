@@ -1,0 +1,88 @@
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 1, 'func': 'register', 'describe': '注册成功-昵称为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111111','pwd':'123456','regname':''}", 'expected': 10001}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:45  ERROR test_api.py test_api [ line:34 ] 断言出错啦，期望结果为：10001，实际结果为：20110
+Traceback (most recent call last):
+  File "D:\TestScript\qiancheng_api\src\test_resource\testcases\test_api.py", line 31, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+  File "D:\soft\Python3\lib\unittest\case.py", line 821, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\soft\Python3\lib\unittest\case.py", line 814, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 20110 != 10001
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 2, 'func': 'register', 'describe': '注册成功-昵称不为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111111','pwd':'123456','regname':'呵呵哒'}", 'expected': 10001}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:45  ERROR test_api.py test_api [ line:34 ] 断言出错啦，期望结果为：10001，实际结果为：20110
+Traceback (most recent call last):
+  File "D:\TestScript\qiancheng_api\src\test_resource\testcases\test_api.py", line 31, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+  File "D:\soft\Python3\lib\unittest\case.py", line 821, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\soft\Python3\lib\unittest\case.py", line 814, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 20110 != 10001
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 3, 'func': 'register', 'describe': '手机号已被注册', 'method': 'get', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111111','pwd':'123456','regname':''}", 'expected': 20110}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 4, 'func': 'register', 'describe': '注册密码为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'','regname':''}", 'expected': 20103}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 5, 'func': 'register', 'describe': '注册手机号为空', 'method': 'get', 'apiName': '/member/register', 'param': "{'mobilephone':'','pwd':'123456','regname':''}", 'expected': 20103}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 6, 'func': 'register', 'describe': '密码长度小于6位', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'12345','regname':''}", 'expected': 20108}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 7, 'func': 'register', 'describe': '密码长度大于18位', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'1234567890123456789','regname':''}", 'expected': 20108}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 8, 'func': 'register', 'describe': '手机号格式不正确', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13301','pwd':'123456','regname':''}", 'expected': 20109}
+ Tue, 04 Jun 2019 16:03:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+ Tue, 04 Jun 2019 16:03:45  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 9, 'func': 'login', 'describe': '登录成功', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':'123456'}", 'expected': 10001}
+ Tue, 04 Jun 2019 16:03:46  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 10, 'func': 'login', 'describe': '手机号为空', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'','pwd':'123456'}", 'expected': 20103}
+ Tue, 04 Jun 2019 16:03:46  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 11, 'func': 'login', 'describe': '密码为空', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':''}", 'expected': 20103}
+ Tue, 04 Jun 2019 16:03:46  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 12, 'func': 'login', 'describe': '输入手机号为未注册的手机号', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111100','pwd':'123456'}", 'expected': 20111}
+ Tue, 04 Jun 2019 16:03:46  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 13, 'func': 'login', 'describe': '输入的密码错误', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':'123'}", 'expected': 20111}
+ Tue, 04 Jun 2019 16:03:46  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 14, 'func': 'recharge', 'describe': '充值成功', 'method': 'get', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':'5000'}", 'expected': 10001}
+ Tue, 04 Jun 2019 16:03:46  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': None, 'data': None, 'msg': '抱歉，请先登录。'}
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  ERROR test_api.py test_api [ line:34 ] 断言出错啦，期望结果为：10001，实际结果为：None
+Traceback (most recent call last):
+  File "D:\TestScript\qiancheng_api\src\test_resource\testcases\test_api.py", line 31, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+TypeError: eval() arg 1 must be a string, bytes or code object
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:23 ] 测试参数：{'case_id': 15, 'func': 'recharge', 'describe': '充值时未输入金额', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':''}", 'expected': 20115}
+ Tue, 04 Jun 2019 16:03:46  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:27 ] 返回结果：{'status': 0, 'code': None, 'data': None, 'msg': '抱歉，请先登录。'}
+ Tue, 04 Jun 2019 16:03:46  INFO test_api.py test_api [ line:28 ] <class 'int'>
+ Tue, 04 Jun 2019 16:03:46  ERROR test_api.py test_api [ line:34 ] 断言出错啦，期望结果为：20115，实际结果为：None
+Traceback (most recent call last):
+  File "D:\TestScript\qiancheng_api\src\test_resource\testcases\test_api.py", line 31, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+TypeError: eval() arg 1 must be a string, bytes or code object
